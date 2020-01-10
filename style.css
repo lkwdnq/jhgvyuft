@@ -1,0 +1,92 @@
+.container{
+    position: relative;
+    border: 2px solid white;
+    width: 400px;
+    height: 125px;
+}.form{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: rgb(26, 25, 25);
+    width: 399px;
+    
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    box-sizing: border-box;
+    width: 133px;
+    height: 47px;
+    color: #fff;
+ 
+    text-align: center;
+    padding-top: 16px;
+    
+
+}
+.one {
+    color:  rgb(92, 156, 216);
+}
+.line{
+    position: absolute;
+    top: 44px;
+    width: 133px;
+    height: 3px;
+    background-color: rgb(92, 156, 216);
+    left: 0px;
+    z-index: 1;
+    transition: 0.5s left;
+}
+.text{
+    width: 410px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#fff;
+    box-sizing: border-box;
+   
+    padding-left: 18px;
+}
+.down1{
+
+}
+.down2, .down3, .two:hover ~ .down1, .two:hover ~ .down3,
+.three:hover ~ .down3, .three:hover ~ .down1{
+    display: none;
+}
+
+.one:hover{
+    color: rgb(92, 156, 216);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.two:hover{
+    color: rgb(92, 156, 216);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.two:hover ~ .down2, .three:hover ~ .down3 {
+    display: block;
+}
+.three:hover{
+    color: rgb(92, 156, 216);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.one:hover ~ .line{
+    transition: 0.5s;
+}
+.two:hover ~ .line{
+    left: 133px;
+}
+.three:hover ~ .line{
+    left: 266px;
+    
+}
+.two:hover ~ .one, .three:hover ~ .one{
+    color: #fff; /* почему-то не работает :( */
+}
